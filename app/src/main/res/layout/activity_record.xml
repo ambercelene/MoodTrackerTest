@@ -8,32 +8,39 @@
 
     <TextView
         android:id="@+id/textview_label"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="24dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
         android:text="@string/overall_mood_for_today"
         android:textColor="@color/colorPrimaryDark"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="25dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="189dp"
-        android:layout_height="79dp"
+        android:id="@+id/mood_selection"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         app:layout_constraintEnd_toEndOf="@+id/textview_label"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textview_label" />
 
-
+    <Button
+        android:id="@+id/track_mood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="Track it"
+        app:layout_constraintEnd_toEndOf="@+id/mood_selection"
+        app:layout_constraintTop_toBottomOf="@+id/mood_selection"
+        android:onClick="onClickTrackMood"/>
 
 </android.support.constraint.ConstraintLayout>

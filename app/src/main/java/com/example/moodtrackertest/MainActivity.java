@@ -17,14 +17,14 @@ public class MainActivity extends AppCompatActivity {
     public void record(View view){
         Intent recordIntent = new Intent(this, Record.class);
 
-// Start the new activity.
+        // Start the new activity
         startActivity(recordIntent);
     }
 
     public void data(View view){
         Intent dataIntent = new Intent(this, Data.class);
 
-// Start the new activity.
+        // Start the new activity
         startActivity(dataIntent);
     }
 

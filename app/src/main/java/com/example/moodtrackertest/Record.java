@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.Button;
 
 public class Record extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
@@ -18,10 +19,12 @@ public class Record extends AppCompatActivity implements AdapterView.OnItemSelec
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_record);
 
-        spinner = (Spinner)findViewById(R.id.spinner);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(Record.this,
-                android.R.layout.simple_spinner_item,paths);
-
+        spinner = (Spinner)findViewById(R.id.mood_selection);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(
+                Record.this,
+                android.R.layout.simple_spinner_item,
+                paths
+        );
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
@@ -30,15 +33,16 @@ public class Record extends AppCompatActivity implements AdapterView.OnItemSelec
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        // TODO: Refactor list selection action using factory and command pattern
         switch (position) {
             case 0:
-                // TODO action that occurs when the first item gets selected
+                // Add Default mood command
                 break;
             case 1:
-                // TODO action that occurs when the second item gets selected
+                // Add Anger mood command
                 break;
             case 2:
-                // TODO action that occurs when the third item gets selected
+                // Add Sad mood command
                 break;
 
         }
@@ -47,5 +51,9 @@ public class Record extends AppCompatActivity implements AdapterView.OnItemSelec
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
+    }
+
+    public void onClickTrackMood(View view) {
+        setContentView(R.layout.activity_record);
     }
 }
