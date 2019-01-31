@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Mood Tracker Test</string>
+    <string name="mood_tracker">Mood Tracker</string>
+    <string name="record">Record</string>
+    <string name="textview">TextView</string>
+    <string name="overall_mood_for_today">Overall Mood for Today</string>
+    <string name="data_main">Data</string>
+    <string name="data_collected">Data Collected</string>
+</resources>
