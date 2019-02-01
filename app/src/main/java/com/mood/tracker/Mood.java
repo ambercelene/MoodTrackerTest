@@ -1,10 +1,10 @@
-package com.example.moodtrackertest;
+package com.mood.tracker;
 
 import java.util.ArrayList;
 
-public abstract class Mood {
+public class Mood {
 
-    private String name;
+    private Feeling overallMood;
     private String definition;
 
     private int intensity; // how strongly you are feeling it
@@ -17,7 +17,7 @@ public abstract class Mood {
     // private ArrayList<Emotion> emotions
 
     public Mood(String moodName) {
-        name = moodName;
+        overallMood = new Feeling(moodName);
 
         //TODO: load correlations for this mood from database
         correlations = new ArrayList<>();
@@ -25,7 +25,7 @@ public abstract class Mood {
 
     @Override
     public String toString() {
-        return name;
+        return overallMood.toString();
     }
 
     public void setIntensity(int intensity) {
